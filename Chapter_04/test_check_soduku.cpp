@@ -1,8 +1,6 @@
 // A program that reads a soduku solution from a file and determines if it is right or not.
 
 #include <iostream>
-#include <fstream>
-#include <vector>
 using namespace std;
 
 import check_soduku_solution;

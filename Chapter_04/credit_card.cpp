@@ -101,7 +101,7 @@ vector<int> readCardNumber()
     std::string number;
 
     // '34567890'
-    // thfjhdjkfkf
+    // 'thfjhdjkfkf'
 
     std::cout << "Enter number: \n";
     std::cin >> number;
@@ -113,7 +113,6 @@ vector<int> readCardNumber()
     //     card_digits.push_back(digit - '0');
     // }
     for (int i = 0; i < number.size(); ++i){
-        // ASCII encoding
         // Convert number into an integer
         card_digits.push_back(number[i] - '0');
         // cout << number[i]<< "\n";

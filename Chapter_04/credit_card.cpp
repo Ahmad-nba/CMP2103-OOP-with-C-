@@ -135,7 +135,9 @@ int getPrefix(std::vector<int> number, int k)
 {
     int k_prefix = 0;
 
-    for (int i = 0; i < k; i++)
+    int length = std::min(k, static_cast<int>(number.size()));
+
+    for (int i = 0; i < length; i++)
     {
         k_prefix = k_prefix * 10 + number[i];
     }

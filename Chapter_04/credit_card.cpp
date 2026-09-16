@@ -114,6 +114,7 @@ vector<int> readCardNumber()
     // }
     for (int i = 0; i < number.size(); ++i){
         // ASCII encoding
+        // Convert number into an integer
         card_digits.push_back(number[i] - '0');
         // cout << number[i]<< "\n";
     }
@@ -152,8 +153,6 @@ int main()
     //     cout << number[i] << "\n";
     
     // }
-
-    // cout << "This is a credit card number:" << number << "\n";
     return 0;
 }
 

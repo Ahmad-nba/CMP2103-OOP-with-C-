@@ -18,6 +18,7 @@ The Luhn checksum algorithm.
 
 The implementation is divided into seven functions, as required by the assignment:
 
+```
 bool isValid(long long number);
 int sumOfDoubleEvenPlace(long long number);
 int getDigit(int number);
@@ -25,6 +26,7 @@ int sumOfOddPlace(long long number);
 bool prefixMatched(long long number, int d);
 int getSize(long long d);
 long long getPrefix(long long number, int k);
+```
 
 *isValid()* -> This is the main validation function. It coordinates all the other functions.
 *getSize()* -> determines the number of digits in a number.

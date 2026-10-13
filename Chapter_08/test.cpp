@@ -1,29 +1,118 @@
-import std;
+// // Inheritance
+// // PArent class
+// // Child classes
 
+import std;
 using namespace std;
 
-class Circle
-{
-    double radius; // private data member
-public:
-    Circle(double r); // default constructor
-    double getRadius()
-    { // public member function to access private data member
-        return radius;
-    }
+// // Geometric Object
+// class GeometricObject
+// {
+// private:
+//     string color = "green";
+//     bool filled = true;
 
-    void setRadius(double r)
-    { // public member function to modify private data member
-        radius = r;
-    }
-};
+// public:
+//     GeometricObject(
+//         string color,
+//         bool filled)
+//         : color(color), filled(filled)
+//     {
+//     }
 
-Circle::Circle(double r = 1.0) : radius{r} {} // constructor with parameter
+//     string getColor() const
+//     {
+//         return color;
+//     }
+
+//     void setColor(const string& color)
+//     {
+//         this->color = color;
+
+//     }
+
+//     bool isFilled() const
+//     {
+//         return filled;
+//     }
+
+//     void setFilled(bool filled)
+//     {
+//         this->filled = filled;
+//     }
+
+//     string toString() const
+//     {
+//         return "color: " + color +
+//                " and filled: " +
+//                (filled ? "true" : "false");
+//     }
+// };
+
+// class Circle : public GeometricObject
+// {
+// private:
+//     double radius;
+
+// public:
+//     Circle(double radius)
+//         : GeometricObject(), radius(radius)
+//     {
+//     }
+
+//     double getRadius() const
+//     {
+//         return radius;
+//     }
+
+//     void setRadius(double radius)
+//     {
+//         radius = radius;
+//     }
+
+//     double getArea() const
+//     {
+//         return radius * radius * numbers::pi;
+//     }
+
+//     double getDiameter() const
+//     {
+//         return 2 * radius;
+//     }
+
+//     double getPerimeter() const
+//     {
+//         return 2 * radius * numbers::pi;
+//     }
+
+//     void printCircle() const
+//     {
+//         cout << toString()
+//              << " radius: " << radius
+//              << '\n';
+//     }
+// };
+
+// int main()
+// {
+//     Circle circle(5.0); // Create a circle with radius 5.0
+
+//     circle.printCircle(); // Access member function
+
+//     // std::cout << "Area: "
+//     //           << circle.getArea() << '\n';
+
+//     // std::cout << "Diameter: "
+//     //           << circle.getDiameter() << '\n';
+
+//     // std::cout << "Perimeter: "
+//     //           << circle.getPerimeter() << '\n';
+
+//     return 0;
+// }
 
 int main()
 {
-    Circle small_circle{};
-    // small_circle.setRadius(5.0); // Set the radius using the public member function
-
-    print("Radius of the circle: {}\n", small_circle.getRadius()); // Get the radius using the public member function
+    char t = 't';
+    cout << ++t << "\n";
 }

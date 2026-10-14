@@ -1,118 +1,114 @@
-// // Inheritance
-// // PArent class
-// // Child classes
+// Inheritance
+// PArent class
+// Child classes
 
 import std;
 using namespace std;
 
-// // Geometric Object
-// class GeometricObject
-// {
-// private:
-//     string color = "green";
-//     bool filled = true;
+// Geometric Object
+class GeometricObject
+{
+private:
+    string color;
+    bool filled;
 
-// public:
-//     GeometricObject(
-//         string color,
-//         bool filled)
-//         : color(color), filled(filled)
-//     {
-//     }
+public:
+    GeometricObject(
+        string color = "green",
+        bool filled = true)
+        : color(color), filled(filled)
+    {
+    }
 
-//     string getColor() const
-//     {
-//         return color;
-//     }
+    string getColor() const
+    {
+        return color;
+    }
 
-//     void setColor(const string& color)
-//     {
-//         this->color = color;
+    void setColor(const string &color)
+    {
+        this->color = color;
+        // class(x, y):
+        // this.
+        // self.
+    }
 
-//     }
+    bool isFilled() const
+    {
+        return filled;
+    }
 
-//     bool isFilled() const
-//     {
-//         return filled;
-//     }
+    void setFilled(bool filled)
+    {
+        this->filled = filled;
+    }
 
-//     void setFilled(bool filled)
-//     {
-//         this->filled = filled;
-//     }
+    string toString() const
+    {
+        return "color: " + color +
+               " and filled: " +
+               (filled ? "true" : "false");
+    }
+};
 
-//     string toString() const
-//     {
-//         return "color: " + color +
-//                " and filled: " +
-//                (filled ? "true" : "false");
-//     }
-// };
+class Circle : public GeometricObject
+{
+private:
+    double radius;
 
-// class Circle : public GeometricObject
-// {
-// private:
-//     double radius;
+public:
+    Circle(double radius)
+        : GeometricObject(), radius(radius)
+    {
+    }
 
-// public:
-//     Circle(double radius)
-//         : GeometricObject(), radius(radius)
-//     {
-//     }
+    double getRadius() const
+    {
+        return radius;
+    }
 
-//     double getRadius() const
-//     {
-//         return radius;
-//     }
+    void setRadius(double radius)
+    {
+        this->radius = radius;
+    }
 
-//     void setRadius(double radius)
-//     {
-//         radius = radius;
-//     }
+    double getArea() const
+    {
+        return radius * radius * numbers::pi;
+    }
 
-//     double getArea() const
-//     {
-//         return radius * radius * numbers::pi;
-//     }
+    double getDiameter() const
+    {
+        return 2 * radius;
+    }
 
-//     double getDiameter() const
-//     {
-//         return 2 * radius;
-//     }
+    double getPerimeter() const
+    {
+        return 2 * radius * numbers::pi;
+    }
 
-//     double getPerimeter() const
-//     {
-//         return 2 * radius * numbers::pi;
-//     }
-
-//     void printCircle() const
-//     {
-//         cout << toString()
-//              << " radius: " << radius
-//              << '\n';
-//     }
-// };
-
-// int main()
-// {
-//     Circle circle(5.0); // Create a circle with radius 5.0
-
-//     circle.printCircle(); // Access member function
-
-//     // std::cout << "Area: "
-//     //           << circle.getArea() << '\n';
-
-//     // std::cout << "Diameter: "
-//     //           << circle.getDiameter() << '\n';
-
-//     // std::cout << "Perimeter: "
-//     //           << circle.getPerimeter() << '\n';
-
-//     return 0;
-// }
+    void printCircle() const
+    {
+        cout << toString()
+             << " radius: " << radius
+             << '\n';
+    }
+};
 
 int main()
 {
-    char t = 't';
-    cout << ++t << "\n";
+    Circle circle(5.0); //circle
+
+    circle.printCircle(); // Access member function
+
+    std::cout << "Area: "
+              << circle.getArea() << '\n';
+
+    std::cout << "Diameter: "
+              << circle.getDiameter() << '\n';
+
+    std::cout << "Perimeter: "
+              << circle.getPerimeter() << '\n';
+
+    return 0;
 }

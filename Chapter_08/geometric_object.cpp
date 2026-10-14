@@ -67,25 +67,25 @@ public:
         return radius;
     }
 
-    // void setRadius(double radius)
-    // {
-    //     this->radius = radius;
-    // }
+    void setRadius(double radius)
+    {
+        this->radius = radius;
+    }
 
-    // double getArea() const
-    // {
-    //     return radius * radius * numbers::pi;
-    // }
+    double getArea() const
+    {
+        return radius * radius * numbers::pi;
+    }
 
-    // double getDiameter() const
-    // {
-    //     return 2 * radius;
-    // }
+    double getDiameter() const
+    {
+        return 2 * radius;
+    }
 
-    // double getPerimeter() const
-    // {
-    //     return 2 * radius * numbers::pi;
-    // }
+    double getPerimeter() const
+    {
+        return 2 * radius * numbers::pi;
+    }
 
     void printCircle() const
     {
@@ -101,14 +101,14 @@ int main()
 
     circle.printCircle(); // Access member function
 
-    // std::cout << "Area: "
-    //           << circle.getArea() << '\n';
+    std::cout << "Area: "
+              << circle.getArea() << '\n';
 
-    // std::cout << "Diameter: "
-    //           << circle.getDiameter() << '\n';
+    std::cout << "Diameter: "
+              << circle.getDiameter() << '\n';
 
-    // std::cout << "Perimeter: "
-    //           << circle.getPerimeter() << '\n';
+    std::cout << "Perimeter: "
+              << circle.getPerimeter() << '\n';
 
     return 0;
 }

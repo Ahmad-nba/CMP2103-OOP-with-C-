@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
 
+<<<<<<< HEAD
 bool isValid(long long number);
 int sumOfDoubleEvenPlace(long long number);
 int getDigit(int number);
@@ -127,5 +128,19 @@ int main()
     else
         cout << "The card number is invalid." << endl;
 
+=======
+import validate_credit_card;
+
+
+int main()
+{
+    vector<int> number = readCardNumber();
+    // cout << "Prefix: " << getPrefix(number, 3) << "\n";
+    // cout << "Matched: " << prefixMatched(number) << "\n";
+    // cout << "Size: " << getSize(number) << "\n";
+    // cout << "Sum of Odd Numbers " << sumOfOddPlace(number) << "\n";
+    // cout << "Sum of double even numbers: " << sumOfDoubleEvenPlace(number) << "\n";
+    cout << "Valid: " << isValid(number) << "\n";
+>>>>>>> c9b8e9d5b0417883ea710d0a59c3d4e6a4eb776d
     return 0;
 }
